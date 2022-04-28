@@ -2,7 +2,7 @@ from django import forms
 from .models import News
 import re
 from django.core.exceptions import ValidationError
-
+##dasda
 
 class NewsForm(forms.ModelForm):
     class Meta:
