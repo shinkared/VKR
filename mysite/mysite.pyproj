@@ -180,6 +180,7 @@
     <Content Include="static\admin\img\icon-yes.svg" />
     <Content Include="static\admin\img\inline-delete.svg" />
     <Content Include="static\admin\img\LICENSE" />
+    <Content Include="static\admin\img\pim-chu-dWzWo22F0mA-unsplash.jpg" />
     <Content Include="static\admin\img\README.txt" />
     <Content Include="static\admin\img\search.svg" />
     <Content Include="static\admin\img\selector-icons.svg" />
@@ -317,6 +318,7 @@
     <Content Include="static\bootstrap\js\bootstrap.min.js" />
     <Content Include="static\bootstrap\js\bootstrap.min.js.map" />
     <Content Include="static\css\style.css" />
+    <Content Include="templates\base - Copy.html" />
     <Content Include="templates\base.html" />
     <Content Include="templates\inc\_nav.html" />
     <Content Include="templates\inc\_sidebar.html" />
