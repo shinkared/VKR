@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\Win10_Game_OS\source\repos\shinkared\VKR\mysite\venv"
+VIRTUAL_ENV="D:\PycharmProjects\VKR-1\mysite\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
