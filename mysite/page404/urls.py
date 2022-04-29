@@ -3,5 +3,5 @@ from .views import *
 
 urlpatterns = [
 
-    path('<str:text_content>/', text, name='text'),
+    path('<path:text_content>/', text, name='text'),
 ]
