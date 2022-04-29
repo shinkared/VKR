@@ -5,6 +5,7 @@
     <RootNamespace>mysite</RootNamespace>
     <InterpreterId>MSBuild|venv|$(MSBuildProjectFullPath)</InterpreterId>
     <SuppressPackageInstallationPrompt>True</SuppressPackageInstallationPrompt>
+    <TestFramework>Pytest</TestFramework>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -32,6 +33,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="manage.py" />
+    <Compile Include="megaapp\admin.py" />
+    <Compile Include="megaapp\apps.py" />
+    <Compile Include="megaapp\migrations\__init__.py" />
+    <Compile Include="megaapp\models.py" />
+    <Compile Include="megaapp\tests.py" />
+    <Compile Include="megaapp\views.py" />
+    <Compile Include="megaapp\__init__.py" />
     <Compile Include="mysite\asgi.py" />
     <Compile Include="mysite\__init__.py" />
     <Compile Include="mysite\settings.py" />
@@ -64,6 +72,7 @@
     <Compile Include="page404\__init__.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="megaapp\templates\megaapp\index.html" />
     <Content Include="mysite\static\bootstrap\css\bootstrap-grid.css" />
     <Content Include="mysite\static\bootstrap\css\bootstrap-grid.css.map" />
     <Content Include="mysite\static\bootstrap\css\bootstrap-grid.min.css" />
@@ -135,7 +144,6 @@
     <Content Include="news\__pycache__\views.cpython-39.pyc" />
     <Content Include="news\__pycache__\__init__.cpython-39.pyc" />
     <Content Include="page404\templates\page404\index.html" />
-    <Content Include="requirements.txt" />
     <Content Include="static\admin\css\autocomplete.css" />
     <Content Include="static\admin\css\base.css" />
     <Content Include="static\admin\css\changelists.css" />
@@ -314,6 +322,10 @@
     <Content Include="templates\inc\_sidebar.html" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="megaapp\" />
+    <Folder Include="megaapp\migrations\" />
+    <Folder Include="megaapp\templates\" />
+    <Folder Include="megaapp\templates\megaapp\" />
     <Folder Include="mysite\" />
     <Folder Include="mysite\static\" />
     <Folder Include="mysite\static\bootstrap\" />
