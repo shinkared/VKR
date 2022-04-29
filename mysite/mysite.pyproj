@@ -52,6 +52,16 @@
     <Compile Include="news\urls.py" />
     <Compile Include="news\views.py" />
     <Compile Include="news\__init__.py" />
+    <Compile Include="page404\admin.py" />
+    <Compile Include="page404\apps.py" />
+    <Compile Include="page404\migrations\__init__.py" />
+    <Compile Include="page404\models.py" />
+    <Compile Include="page404\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="page404\tests.py" />
+    <Compile Include="page404\views.py" />
+    <Compile Include="page404\__init__.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="mysite\static\bootstrap\css\bootstrap-grid.css" />
@@ -124,6 +134,7 @@
     <Content Include="news\__pycache__\urls.cpython-39.pyc" />
     <Content Include="news\__pycache__\views.cpython-39.pyc" />
     <Content Include="news\__pycache__\__init__.cpython-39.pyc" />
+    <Content Include="page404\templates\page404\index.html" />
     <Content Include="requirements.txt" />
     <Content Include="static\admin\css\autocomplete.css" />
     <Content Include="static\admin\css\base.css" />
@@ -318,6 +329,10 @@
     <Folder Include="news\templatetags\" />
     <Folder Include="news\templatetags\__pycache__\" />
     <Folder Include="news\__pycache__\" />
+    <Folder Include="page404\" />
+    <Folder Include="page404\migrations\" />
+    <Folder Include="page404\templates\" />
+    <Folder Include="page404\templates\page404\" />
     <Folder Include="static\" />
     <Folder Include="static\admin\" />
     <Folder Include="static\admin\css\" />
