@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=D:\PycharmProjects\VKR-1\mysite\venv
+set VIRTUAL_ENV=C:\Users\Win10_Game_OS\source\repos\shinkared\VKR\mysite\venv
 
 if not defined PROMPT set PROMPT=$P$G
 
