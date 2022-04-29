@@ -3,4 +3,4 @@ from django.views.generic import ListView
 
 def text(request, text_content):
 
-    return render(request, 'news/view_news.html', {"news_item": text_content})
+    return render(request, 'base.html', {"content": text_content})
