@@ -136,3 +136,8 @@ MEDIA_URL = '/media/'
 INTERNAL_IPS = [
     '127.0.0.1',
 ]
+
+if DEBUG:
+    import mimetypes
+    from django.urls import path, include
+    mimetypes.add_type("application/javascript", ".js", True)
