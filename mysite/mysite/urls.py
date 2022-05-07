@@ -23,7 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('news.urls')),
     path('', include('page404.urls')),
-
+    path('__debug__/', include('debug_toolbar.urls')),
 ]
 
 if settings.DEBUG:
