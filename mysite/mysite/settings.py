@@ -141,3 +141,11 @@ if DEBUG:
     import mimetypes
     from django.urls import path, include
     mimetypes.add_type("application/javascript", ".js", True)
+
+
+EMAIL_HOST = 'smtp.mail.ru'
+EMAIL_PORT = 2525
+EMAIL_HOST_USER = 'testmailvkr@mail.ru'
+EMAIL_HOST_PASSWORD = 'FNBR5ASgYzjrGhQvGeR6'
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False

@@ -4,10 +4,11 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.paginator import Paginator
 
 from .models import News, Category
-from .forms import NewsForm, UserRegisterForm, UserLoginForm
+from .forms import NewsForm, UserRegisterForm, UserLoginForm, ContactForm
 from .utils import MyMixin
 from django.contrib import messages
 from django.contrib.auth import login, logout
+from django.core.mail import send_mail
 
 
 def register(request):
@@ -43,11 +44,21 @@ def user_logout(request):
 
 
 def test(request):
-    objects = ['john1', 'paul2', 'george3', 'ringo4', 'john5', 'paul6', 'george7', ]
-    paginator = Paginator(objects, 2)
-    page_num = request.GET.get('page', 1)
-    page_objects = paginator.get_page(page_num)
-    return render(request, 'news/test.html', {'page_obj': page_objects})
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            mail = send_mail(form.cleaned_data['subject'], form.cleaned_data['content'], 'testmailvkr@mail.ru',
+                      ['dperetertov@gmail.com'], fail_silently=True)
+            if mail:
+                messages.success(request, 'Письмо отправлено')
+                return redirect('test')
+            else:
+                messages.error(request, 'Ошибка отправки')
+        else:
+            messages.error(request, 'Ошибка отправки1')
+    else:
+        form = ContactForm()
+    return render(request, 'news/test.html', {'form': form})
 
 
 class HomeNews(MyMixin, ListView):
@@ -92,7 +103,7 @@ class ViewNews(DetailView):
 class CreateNews(LoginRequiredMixin, CreateView):
     form_class = NewsForm
     template_name = 'news/add_news.html'
-    #login_url = '/admin/'
+    # login_url = '/admin/'
     raise_exception = True
 
 

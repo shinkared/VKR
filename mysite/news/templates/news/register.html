@@ -15,9 +15,7 @@
 <h1>Регистрация</h1>
 
 <form method="post">
-
     {% csrf_token %}
-
     {{ form.as_p }}
     <div class="d-grid gap-2">
         <button type="submit" class="btn btn-primary">Регистрация</button>
