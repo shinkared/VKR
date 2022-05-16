@@ -365,3 +365,4 @@ MigrationBackup/
 FodyWeavers.xsd
 /mysite/venv/
 /mysite/venv/
+/mysite/static/ckeditor/
