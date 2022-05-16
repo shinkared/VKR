@@ -366,3 +366,4 @@ FodyWeavers.xsd
 /mysite/venv/
 /mysite/venv/
 /mysite/static/ckeditor/
+/mysite/static/
