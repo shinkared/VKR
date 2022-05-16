@@ -25,7 +25,7 @@ urlpatterns = [
     path('', include('news.urls')),
     path('captcha/', include('captcha.urls')),
     path('blog/', include('blog.urls')),
-    # path('', include('page404.urls')),
+    path('', include('page404.urls')),
     path('__debug__/', include('debug_toolbar.urls')),
 ]
 
